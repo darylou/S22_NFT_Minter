@@ -6,6 +6,7 @@ import Moralis from "moralis";
 import Web3 from "web3/dist/web3.min.js";
 import { contractABI, contractAddress } from "../contract.js";
 import axios from 'axios';
+import "./minter.css";
 
 const Buffer = require('buffer/').Buffer;
 
@@ -86,26 +87,12 @@ function Minter(){
                 
                 <form onSubmit={(e) => handleSubmit(e)}>
                     <input 
-                        type="text" 
-                        className="border-[1px] p-2 text-lg border-black w-full" 
-                        placeholder="Name"
-                        value = {name} 
-                        onChange = {(e) => setName(e.target.value) }
-                    />
-                    <input 
-                        type="text" 
-                        className="border-[1px] p-2 text-lg border-black w-full" 
-                        placeholder="Description"
-                        value = {description} 
-                        onChange = {(e) => setDescription(e.target.value) }
-                    />
-                    <input 
                         type="file" 
                         className="border-[1px] p-2 text-lg border-black w-full" 
                         onChange = {(e) => setFile(e.target.files[0])}/>
                     <button 
                         type="submit" 
-                        className="border-[1px] p-2 text-lg border-black w-full"
+                        className="uploadButton"
                     >
                         Mint
                     </button>

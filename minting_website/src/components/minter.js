@@ -5,6 +5,7 @@ import { base64encode, base64decode } from 'nodejs-base64';
 import Moralis from "moralis";
 import Web3 from "web3/dist/web3.min.js";
 import { contractABI, contractAddress } from "../contract.js";
+import axios from 'axios';
 
 const Buffer = require('buffer/').Buffer;
 
@@ -49,6 +50,23 @@ function Minter(){
         .mint(metadataurl)
         .send({ from: user.get("ethAddress") });
       const tokenId = response.events.Transfer.returnValues.tokenId;
+
+      var date = new Date();
+      const date_string = date.toISOString();
+      axios.post("http://localhost:8080/upload", 
+      {
+        url : file1url,
+        date : date_string
+      },{})
+        .then(function (response) {
+          console.log("response = " + response.data);
+          alert("Submitted Successfully!")
+        })
+        .catch(function (error) {
+          console.log(error);
+          alert("Something else went wrong.")
+        });
+
 
       alert(
         `NFT successfully minted. Contract address - ${contractAddress} and Token ID - ${tokenId}`

@@ -4,6 +4,7 @@ import Login from './components/login';
 import Minter from './components/minter';
 import {Route, Routes, BrowserRouter} from 'react-router-dom';
 import Home from './pages/Home';
+import FullCollectionPage from './pages/FullCollectionPage';
 
 function App() {
   return (
@@ -11,7 +12,7 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path = "/" element = {<Home/>}/>
-          <Route path = "/minter" element = {<Minter/>}/>
+          <Route path = "/full-collection" element = {<FullCollectionPage/>}/>
         </Routes>
       </BrowserRouter>
     </div>

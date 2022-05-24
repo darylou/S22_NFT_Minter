@@ -7,6 +7,8 @@
     align-items: center;
     font-size: 1.0rem;
     padding-right: 1.0rem;
+    font-family: Verdana;
+    
 }
 
 .navbar-logo {
@@ -69,8 +71,8 @@
 
     .navbar-logo {
         color: #FBE555;
-        justify-content: left;
-        align-items: left;
+        justify-content: center;
+        align-items: center;
         padding-top: 1.0rem;
         font-family: 'Sacramento', cursive;
         font-size: 6.0rem;
@@ -87,6 +89,7 @@
         left: -100%;
         opacity: 1;
         transition: all 0.5s ease;
+        z-index: 1;
     }
 
     .nav-menu.active {
@@ -102,13 +105,13 @@
         padding: 2.0rem;
         width: 100%;
         display: table;
-        max-width: 80%;
+        max-width: 100%;
     }
 
     .nav-links:hover {
         background-color: #7577fa;
-        border-radius: 0;
-        max-width: 80%;
+        border-radius: 10px;
+        max-width: 100%;
     }
 
     .navbar-logo {
@@ -139,7 +142,7 @@
         padding: 1.5rem;
         margin: 2rem;
         border-radius: 8px;
-        width: 80%;
+        width: 93%;
         background: #4ad9e4;
         color: #fff;
         font-size: 1.5rem;

@@ -1,3 +1,4 @@
+/*
 import React from "react";
 // import ReactDOM from "react-dom";
 import ImageUploading, { ImageListType } from "react-images-uploading";
@@ -128,3 +129,4 @@ function UploadImage() {
 }
 
 export default UploadImage
+*/

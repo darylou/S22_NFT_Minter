@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import {useState} from 'react';
 import axios from 'axios';
-import './DisplayFullCollection.css';
+import './DisplayFullCollection.css'; 
 
 // for formating images 
 function Card(props) {
@@ -20,7 +20,7 @@ function Card(props) {
 }
 
 function createCard(token) {
-    let id = "Token " + token.id;
+    let id = "Token " + token.id +": " + token.date.substring(0,10);
     return <Card key ={token.id} tokenID = {id} img = {token.url}/>
 }
 
@@ -36,7 +36,7 @@ function DisplayAllTokens() {
     return (
         <body className="body">
             <div className="main">
-                    {images.map(createCard)}
+                    {images.map(createCard).reverse()}
             </div>
         </body>
 

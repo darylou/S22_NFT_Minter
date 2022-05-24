@@ -7,7 +7,16 @@
     margin-right: 6px;
     width: 100%;
 }
+
 .uploadButton:hover {
     background-color: #8486f1;
     color: #fff;
+}
+
+.chooseFile {
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    padding-top: 2.0rem;
+    padding-bottom: 1.8rem;
 }

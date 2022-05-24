@@ -32,8 +32,6 @@ function Minter(){
 
       // generate metadata and save to ipfs
       const metadata = {
-        name,
-        description,
         image: file1url,
       };
       const file2 = new Moralis.File(`metadata.json`, {
@@ -53,7 +51,7 @@ function Minter(){
       const tokenId = response.events.Transfer.returnValues.tokenId;
 
       var date = new Date();
-      const date_string = date.toISOString();
+      const date_string = date.toISOString().substr(0,10);
       axios.post("http://localhost:8080/upload", 
       {
         url : file1url,
@@ -79,11 +77,7 @@ function Minter(){
     }
     return(
         <div>
-            <button 
-                className = "border-[1px] p-2 text-lg border-black"
-                onClick={() => logout()}>Log Out
-            </button>
-            <div className="flex w-screen h-screen items-center justify-center">
+            <div className="chooseFile">
                 
                 <form onSubmit={(e) => handleSubmit(e)}>
                     <input 

@@ -51,6 +51,7 @@ function Minter(){
       const tokenId = response.events.Transfer.returnValues.tokenId;
 
       var date = new Date();
+      date.setDate(date.getDate()-1);
       const date_string = date.toISOString().substr(0,10);
       axios.post("http://localhost:8080/upload", 
       {

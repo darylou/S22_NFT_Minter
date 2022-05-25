@@ -28,7 +28,7 @@ function DisplayImages() {
 
     const [images, setImageList] = useState([]);
     
-    axios.get("http://localhost:8080/upload")
+    axios.get("https://foodchain-coderssb.herokuapp.com/upload")
         .then(response => {
             setImageList( response.data );
         });
